@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,4 +14,24 @@
  * limitations under the License.
  */
 
-include ':app', ':kotilondemo'
+package com.yao.kotilondemo.fragment
+
+import androidx.fragment.app.Fragment
+
+/**
+ *
+ * @ProjectName:    sunflower
+ * @Package:        com.yao.kotilondemo.fragment
+ * @ClassName:      PlantDetailFragment
+ * @Description:     java类作用描述
+ * @Author:         Anson
+ * @CreateDate:     2019/10/24 16:02
+ * @UpdateUser:     更新者：
+ * @UpdateDate:     2019/10/24 16:02
+ * @UpdateRemark:   更新说明：
+ * @Version:        1.0
+ */
+class PlantDetailFragment:Fragment(){
+
+
+}
