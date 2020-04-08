@@ -38,6 +38,7 @@ class HomeViewPagerFragment : Fragment() {
         val binding = FragmentViewPagerBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabs
         val viewPager = binding.viewPager
+        val toolbar = binding.toolbar
 
         viewPager.adapter = SunflowerPagerAdapter(this)
 
