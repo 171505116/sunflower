@@ -16,20 +16,40 @@
 
 package com.yao.kotilondemo.fragment
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.yao.kotilondemo.adapter.PlantAdapter
+import com.yao.kotilondemo.databinding.FragmentPlantListBinding
 
 /**
- *
- * @ProjectName:    sunflower
- * @Package:        com.yao.kotilondemo.fragment
- * @ClassName:      PlantListFragment
- * @Description:     java类作用描述
- * @Author:         Anson
- * @CreateDate:     2019/11/1 11:00
- * @UpdateUser:     更新者：
- * @UpdateDate:     2019/11/1 11:00
- * @UpdateRemark:   更新说明：
- * @Version:        1.0
+ * @Author: Xiehy
+ * @Date: 2020/4/9  9:50
+ * @Description: 植物列表页面
  */
 class PlantListFragment:Fragment() {
+
+    private val viewModel: PlantListViewModel by viewModels{
+        InjectorUtils.pro
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val binding = FragmentPlantListBinding.inflate(inflater,container,false);
+        context ?: return binding.root
+
+        val adapter = PlantAdapter()
+        binding.plantList.adapter = adapter
+        subscribeUi(adapter)
+
+        setHasOptionsMenu(true)
+        return binding.root
+    }
+
+    private fun subscribeUi(adapter:PlantAdapter){
+        viewModel.plants.ob
+    }
 }
+
