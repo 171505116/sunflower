@@ -16,13 +16,18 @@
 
 package com.yao.jujutimer
 
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.Timer
 import kotlin.concurrent.timerTask
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //显示时间
          var tv_timer = findViewById<TextView>(R.id.tv_timer);
+        //设置字体
+        val typeface = Typeface.createFromAsset(this.getAssets(), "font/digital-7.ttf")
+        tv_timer.setTypeface(typeface)
         tv_timer.setText(getNow())
 
 
@@ -42,16 +50,14 @@ class MainActivity : AppCompatActivity() {
         },0,1000)
 
 
+        var iv_setting = findViewById<ImageView>(R.id.iv_setting)
+        iv_setting.setOnClickListener {
+            //打开设置页面
+        }
     }
 
     fun getNow():String{
         return SimpleDateFormat("HH:mm:ss").format(Date())
     }
 
-
 }
-
-
-
-
-

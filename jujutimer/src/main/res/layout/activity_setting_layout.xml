@@ -24,25 +24,9 @@
     tools:context=".MainActivity">
 
 
-    <!--在右上角放置一个 三点控件 让用户去设置 -->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp">
-
-        <ImageView
-            android:id="@+id/iv_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_more_vert_white_48dp"/>
-
-    </RelativeLayout>
 
 
-    <TextView
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
         android:id="@+id/tv_timer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
