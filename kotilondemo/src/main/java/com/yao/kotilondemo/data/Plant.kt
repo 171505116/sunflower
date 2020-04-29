@@ -17,6 +17,7 @@
 package com.yao.kotilondemo.data
 
 import androidx.room.ColumnInfo
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 import java.util.Calendar.DAY_OF_YEAR
@@ -34,6 +35,7 @@ import java.util.Calendar.DAY_OF_YEAR
  * @UpdateRemark:   更新说明：
  * @Version:        1.0
  */
+@Entity(tableName = "plants")
 data class Plant(@PrimaryKey @ColumnInfo(name="id") val plantId:String,
                  val name:String,
                  val description:String,

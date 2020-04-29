@@ -16,11 +16,13 @@
 
 package com.yao.jujutimer
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.yao.jujutimer.activity.SettingActivity
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.Timer
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         var iv_setting = findViewById<ImageView>(R.id.iv_setting)
         iv_setting.setOnClickListener {
             //打开设置页面
+            val intent = Intent(baseContext,SettingActivity::class.java);
+            startActivity(intent)
         }
     }
 

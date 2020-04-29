@@ -34,6 +34,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.SettingActivity">
+
+        </activity>
+
         <!-- 设置设计稿 适配方案-->
         <meta-data
             android:name="design_width_in_dp"

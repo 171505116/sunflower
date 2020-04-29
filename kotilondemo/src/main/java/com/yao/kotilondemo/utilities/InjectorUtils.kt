@@ -20,6 +20,9 @@ import android.content.Context
 import com.yao.kotilondemo.data.AppDatabase
 import com.yao.kotilondemo.data.GardenPlantingRepository
 import com.yao.kotilondemo.data.PlantRepository
+import com.yao.kotilondemo.viewmodels.GardenPlantingListViewModelFactory
+import com.yao.kotilondemo.viewmodels.PlantDetailViewModelFactory
+import com.yao.kotilondemo.viewmodels.PlantListViewModelFactory
 
 /**
  *
@@ -37,7 +40,7 @@ import com.yao.kotilondemo.data.PlantRepository
 object InjectorUtils {
 
     private fun getPlantRepository(context:Context):PlantRepository{
-        return PlantRepository.getInstance(AppDatabase.getInstance(context.applicationContext).plantDao)
+        return PlantRepository.getInstance(AppDatabase.getInstance(context.applicationContext).plantDao())
     }
 
     private fun getGardenPlantingRepository(context:Context): GardenPlantingRepository {
@@ -49,12 +52,12 @@ object InjectorUtils {
         return GardenPlantingListViewModelFactory(repository)
     }
 
-    fun providePlantListViewModelFactory(context:Context):PlantListViewModelFactory{
+    fun providePlantListViewModelFactory(context:Context): PlantListViewModelFactory {
         val repository = getPlantRepository(context)
         return  PlantListViewModelFactory(repository)
     }
 
-    fun providePlantDetailViewModelFactory(context:Context,plantId:String):PlantDetailViewModleFactory{
+    fun providePlantDetailViewModelFactory(context:Context,plantId:String):PlantDetailViewModelFactory{
         return PlantDetailViewModelFactory(getPlantRepository(context),getGardenPlantingRepository(context),plantId)
     }
 }

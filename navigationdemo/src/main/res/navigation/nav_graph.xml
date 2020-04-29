@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/apk/tools"
+    app:startDestination="@id/List01Fragment">
+
+    <fragment
+        android:id="@+id/List01Fragment"
+        android:name="com.yao.navigationdemo.fragment.List01Fragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/list_fm_layout">
+
+        <action
+            android:id="@+id/action_list02"
+            app:destination="@+id/List02Fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/List02Fragment"
+        android:name="com.yao.navigationdemo.fragment.List02Fragment"
+        android:label="fragment_page02"
+        tools:layout="@layout/list_fm_layout">
+
+        <action
+            android:id="@+id/acition_list01"
+            app:popUpTo="@+id/List01Fragment"/>
+        <action
+            android:id="@+id/action_list03"
+            app:destination="@+id/List03Fragment"/>
+    </fragment>
+
+    <navigation
+        android:id="@+id/nav_graph_page3"
+        app:startDestination="@id/List03Fragment">
+        <fragment
+            android:id="@+id/List03Fragment"
+            android:name="com.yao.navigationdemo.fragment.List03Fragment"
+            android:label="fragment_page03"
+            tools:layout="@layout/list_fm_layout">
+
+        </fragment>
+    </navigation>
+</navigation>

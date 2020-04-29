@@ -16,4 +16,5 @@
 
 <resources>
     <string name="app_name">JUJUTimer</string>
+    <string name="setting">设置</string>
 </resources>

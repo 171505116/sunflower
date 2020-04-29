@@ -16,8 +16,16 @@
 
 package com.yao.jujutimer.activity
 
+import android.content.Context
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.WindowManager
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
+import com.yao.jujutimer.R
+import kotlinx.android.synthetic.main.activity_setting_layout.*
 
 /**
  *
@@ -34,8 +42,30 @@ import androidx.appcompat.app.AppCompatActivity
  */
 class SettingActivity : AppCompatActivity(){
 
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var toolbar: MaterialToolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN) //显示状态栏
+        setContentView(R.layout.activity_setting_layout)
 
+        recyclerView = findViewById(R.id.rv_setting)
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        initActionBar()
+    }
+
+    private fun initActionBar() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setTitle("设置")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            android.R.id.home->
+                finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
