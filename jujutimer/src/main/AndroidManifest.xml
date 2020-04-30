@@ -44,7 +44,7 @@
             android:value="1080"/>
         <meta-data
             android:name="design_height_in_dp"
-            android:value="2340"/>
+            android:value="1920"/>
     </application>
 
 </manifest>

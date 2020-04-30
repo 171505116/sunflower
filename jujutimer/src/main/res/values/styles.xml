@@ -37,7 +37,7 @@
     </style>
 
 
-    <style name="toolbar" parent="Widget.AppCompat.ActionBar">
+    <style name="toolbar" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">48dp</item>
     </style>
 </resources>

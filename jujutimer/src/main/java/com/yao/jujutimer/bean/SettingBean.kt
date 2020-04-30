@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,4 +14,21 @@
  * limitations under the License.
  */
 
-include ':app', ':kotilondemo', ':navigationdemo', ':jujutimer', ':bottomsheetdemo'
+package com.yao.jujutimer.bean
+
+/**
+ *
+ * @ProjectName:    sunflower
+ * @Package:        com.yao.jujutimer.bean
+ * @ClassName:      SettingBean
+ * @Description:     java类作用描述
+ * @Author:         Anson
+ * @CreateDate:     2020/4/30 14:41
+ * @UpdateUser:     更新者：
+ * @UpdateDate:     2020/4/30 14:41
+ * @UpdateRemark:   更新说明：
+ * @Version:        1.0
+ */
+data class SettingBean(var title:String) {
+
+}
