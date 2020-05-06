@@ -52,9 +52,9 @@ class SettingActivity : AppCompatActivity(){
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN) //显示状态栏
         setContentView(R.layout.activity_setting_layout)
         //recyclerView = findViewById(R.id.rv_setting)
-        //toolbar = findViewById(R.id.toolbar)
-        //setSupportActionBar(toolbar)
-        //initActionBar()
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        initActionBar()
         //initRecyclerView()
 
         supportFragmentManager
@@ -71,7 +71,6 @@ class SettingActivity : AppCompatActivity(){
     }
 
     private fun initActionBar() {
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setTitle("设置")

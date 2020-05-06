@@ -17,6 +17,9 @@
 package com.yao.jujutimer.fragment
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.yao.jujutimer.R
 
@@ -33,8 +36,13 @@ import com.yao.jujutimer.R
  * @UpdateRemark:   更新说明：
  * @Version:        1.0
  */
-class SettingFragment:PreferenceFragmentCompat() {
+class SettingFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.setting,rootKey)
+        setPreferencesFromResource(R.xml.setting, rootKey)
+        val updatePreference: Preference? = findPreference("update")
+        updatePreference?.setOnPreferenceClickListener {
+            Toast.makeText(context, "更新", Toast.LENGTH_SHORT).show()
+            true
+        }
     }
 }

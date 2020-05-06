@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textSize="280sp"
+        android:textSize="160sp"
         android:textColor="@color/colorWhite"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
