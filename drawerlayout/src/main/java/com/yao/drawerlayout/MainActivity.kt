@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,4 +14,15 @@
  * limitations under the License.
  */
 
-include ':app', ':kotilondemo', ':navigationdemo', ':jujutimer', ':bottomsheetdemo', ':downloaderfile', ':recyclerviewdemo', ':drawerlayout'
+package com.yao.drawerlayout
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}

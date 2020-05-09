@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,4 +14,25 @@
  * limitations under the License.
  */
 
-include ':app', ':kotilondemo', ':navigationdemo', ':jujutimer', ':bottomsheetdemo', ':downloaderfile', ':recyclerviewdemo', ':drawerlayout'
+package com.yao.downloaderfile
+
+/**
+ *
+ * @ProjectName:    sunflower
+ * @Package:        com.yao.downloaderfile
+ * @ClassName:      OffMapDownloadListener
+ * @Description:     离线地图下载监听
+ * @Author:         Anson
+ * @CreateDate:     2020/5/7 16:19
+ * @UpdateUser:     更新者：
+ * @UpdateDate:     2020/5/7 16:19
+ * @UpdateRemark:   更新说明：
+ * @Version:        1.0
+ */
+interface OffMapDownloadListener {
+    fun onPrepare()
+
+    fun onSuccess(path:String)
+
+    fun onFailed(throwable: Throwable)
+}
