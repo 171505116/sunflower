@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,7 +12,25 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * ':app', ':kotilondemo', ':navigationdemo', ':jujutimer', ':bottomsheetdemo', ':downloaderfile', ':recyclerviewdemo', ':drawerlayout', ':dagger2demo',
  */
 
-include  ':dagger2javademo', ':lib', ':lib2', ':mvpdemo'
+package com.yao.lib2.a;
+
+import dagger.Component;
+
+/**
+ * @ProjectName: sunflower
+ * @Package: com.yao.lib2.a
+ * @ClassName: CarComponent
+ * @Description: java类作用描述
+ * @Author: Anson
+ * @CreateDate: 2020/6/15 14:57
+ * @UpdateUser: 更新者：
+ * @UpdateDate: 2020/6/15 14:57
+ * @UpdateRemark: 更新说明：
+ * @Version: 1.0
+ */
+@Component
+public interface CarComponent {
+    void inject(Car car);
+}
