@@ -14,16 +14,31 @@
  * limitations under the License.
  */
 
-package com.yao.mvpdemo;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.yao.mvpdemo.ui.main;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.yao.mvpdemo.R;
+
+/**
+ * @ProjectName: sunflower
+ * @Package: com.yao.mvpdemo.ui.main
+ * @ClassName: MainActivity
+ * @Description: java类作用描述
+ * @Author: Anson
+ * @CreateDate: 2020/6/17 14:10
+ * @UpdateUser: 更新者：
+ * @UpdateDate: 2020/6/17 14:10
+ * @UpdateRemark: 更新说明：
+ * @Version: 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
