@@ -24,9 +24,9 @@ import dagger.Component;
  * @ClassName: CarComponent
  * @Description: java类作用描述
  * @Author: Anson
- * @CreateDate: 2020/6/15 16:00
+ * @CreateDate: 2020/6/18 10:38
  * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 16:00
+ * @UpdateDate: 2020/6/18 10:38
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
  */

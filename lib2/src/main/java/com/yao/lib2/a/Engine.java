@@ -24,28 +24,26 @@ import javax.inject.Inject;
  * @ClassName: Engine
  * @Description: java类作用描述
  * @Author: Anson
- * @CreateDate: 2020/6/15 14:44
+ * @CreateDate: 2020/6/18 10:04
  * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 14:44
+ * @UpdateDate: 2020/6/18 10:04
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
  */
 public class Engine {
 
+//    引擎类，把引擎安装到car 中
+
     @Inject
-    Engine(){
-
+    public Engine() {
     }
-
 
     @Override
     public String toString() {
-        return "Engine{}";
+        return "Engine()";
     }
 
-    private String name;
-
     public void run(){
-        System.out.println("running");
+        System.out.println("Engine running");
     }
 }

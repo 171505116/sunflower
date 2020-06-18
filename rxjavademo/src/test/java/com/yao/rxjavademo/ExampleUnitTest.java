@@ -14,28 +14,20 @@
  * limitations under the License.
  */
 
-package com.yao.lib;
+package com.yao.rxjavademo;
 
-import javax.inject.Inject;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * @ProjectName: sunflower
- * @Package: com.yao.lib
- * @ClassName: Car
- * @Description: java类作用描述
- * @Author: Anson
- * @CreateDate: 2020/6/15 11:14
- * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 11:14
- * @UpdateRemark: 更新说明：
- * @Version: 1.0
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class Car {
-
-    @Inject
-    Engine(){}
-
-    public void drive(){
-        System.out.println("开小汽车");
+public class ExampleUnitTest {
+    @Test
+    public void addition_isCorrect() {
+        assertEquals(4, 2 + 2);
     }
 }

@@ -24,9 +24,9 @@ import javax.inject.Inject;
  * @ClassName: Engine
  * @Description: java类作用描述
  * @Author: Anson
- * @CreateDate: 2020/6/15 15:50
+ * @CreateDate: 2020/6/18 10:34
  * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 15:50
+ * @UpdateDate: 2020/6/18 10:34
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
  */
@@ -35,10 +35,11 @@ public class Engine {
     private String name;
 
     @Inject
-    Engine(){}
+    public Engine() {
+    }
 
-    Engine(String name){
-        this.name = name;
+    public Engine(String str){
+        this.name = str;
     }
 
     @Override
@@ -49,6 +50,8 @@ public class Engine {
     }
 
     public void run(){
-        System.out.println("running");
+        System.out.println("engine running!");
     }
 }
+
+

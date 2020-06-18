@@ -25,20 +25,23 @@ import dagger.Provides;
  * @ClassName: MarkCarModule
  * @Description: java类作用描述
  * @Author: Anson
- * @CreateDate: 2020/6/15 15:57
+ * @CreateDate: 2020/6/18 10:38
  * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 15:57
+ * @UpdateDate: 2020/6/18 10:38
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
+ */
+/**
+ * 用于标注提供依赖的类。你可能会有点困惑，上面不是提到用@Inject标记构造函数就可以提供依赖了么，
+ * 为什么还需要@Module？很多时候我们需要提供依赖的构造函数是第三方库的，我们没法给它加上@Inject注解，
+ * 又比如说提供以来的构造函数是带参数的，如果我们之所简单的使用@Inject标记它，那么他的参数又怎么来呢？@Module正是帮我们解决这些问题的
  */
 @Module
 public class MarkCarModule {
 
-    public MarkCarModule() {
+    @Provides
+    Engine providesEngine(){
+        return new Engine("Nas-Gear");
     }
 
-    @Provides
-    Engine provideEngine(){
-        return new Engine("gear");
-    }
 }

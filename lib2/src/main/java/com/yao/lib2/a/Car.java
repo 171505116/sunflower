@@ -24,23 +24,24 @@ import javax.inject.Inject;
  * @ClassName: Car
  * @Description: java类作用描述
  * @Author: Anson
- * @CreateDate: 2020/6/15 13:40
+ * @CreateDate: 2020/6/18 10:03
  * @UpdateUser: 更新者：
- * @UpdateDate: 2020/6/15 13:40
+ * @UpdateDate: 2020/6/18 10:03
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
  */
 public class Car {
 
+//   Dagger2的基本使用
     @Inject
     Engine engine;
 
-    public Car(){
-        DaggerCarComponent.builder().build().inject(this);
+    public Engine getEngine(){
+        return engine;
     }
 
-    public Engine getEngine(){
-        return  this.engine;
+    public Car() {
+        DaggerCarComponent.builder().build().inject(this);
     }
 
     public static void main(String[] args) {

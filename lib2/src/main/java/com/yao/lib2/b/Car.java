@@ -30,6 +30,10 @@ import javax.inject.Inject;
  * @UpdateRemark: 更新说明：
  * @Version: 1.0
  */
+
+/**
+ * 如果创建的car 是带参数的呢？比如说制造一台引擎是需要齿轮(Gear)的。或者Eggine类是我们无法修改的呢？这时候就需要@Module和@Provide上场了
+ */
 public class Car {
 
     @Inject

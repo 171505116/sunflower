@@ -16,6 +16,7 @@
 
 package com.yao.mvpdemo.ui.login.di;
 
+import com.yao.mvpdemo.bean.PersonBean;
 import com.yao.mvpdemo.ui.login.LoginContract;
 import com.yao.mvpdemo.ui.login.LoginModel;
 import com.yao.mvpdemo.ui.login.LoginPresenter;
@@ -57,5 +58,10 @@ public class LoginModule {
     @Provides
     LoginContract.Presenter providePresenter(LoginPresenter presenter){
         return presenter;
+    }
+
+    @Provides
+    PersonBean providePersonBean(){
+        return  new PersonBean();
     }
 }

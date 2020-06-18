@@ -17,6 +17,7 @@
 package com.yao.mvpdemo.ui.login;
 
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,9 +26,12 @@ import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.yao.mvpdemo.R;
 import com.yao.mvpdemo.base.BaseFragment;
+import com.yao.mvpdemo.bean.PersonBean;
 import com.yao.mvpdemo.ui.main.MainActivity;
 
 import java.util.concurrent.TimeUnit;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import io.reactivex.Observable;
@@ -54,12 +58,16 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
         LoginContract.View {
 
 
+    private static final String TAG = LoginFragment.class.getSimpleName();
     @BindView(R.id.et_username)
     EditText etUsername;
     @BindView(R.id.et_password)
     EditText etPassword;
     @BindView(R.id.btn_login)
     Button btnLogin;
+
+
+
 
     @Override
     protected int layoutId() {
@@ -101,6 +109,8 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
                         mPresenter.login(username, password);
                     }
                 });
+
+
      }
 
     @Override

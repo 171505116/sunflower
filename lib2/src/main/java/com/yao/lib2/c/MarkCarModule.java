@@ -39,13 +39,13 @@ public class MarkCarModule {
 
     @Engine.QualifierA
     @Provides
-    Engine proivdeEngineA(){
-        return new Engine("gearA");
+    Engine providesEngineA() {
+        return new Engine("Nas-GearA");
     }
 
     @Engine.QualifierB
     @Provides
-    Engine provideEngineB(){
-        return new Engine("gearB");
+    Engine providesEngineB() {
+        return new Engine("Nas-GearB");
     }
 }
