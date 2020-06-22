@@ -15,4 +15,4 @@
  * ':app', ':kotilondemo', ':navigationdemo', ':jujutimer', ':bottomsheetdemo', ':downloaderfile', ':recyclerviewdemo', ':drawerlayout', ':dagger2demo',
  */
 
-include  ':dagger2javademo', ':lib', ':lib2', ':mvpdemo'
+include  ':dagger2javademo', ':lib', ':lib2',':kotilondemo', ':mvpdemo', ':rxjavademo', ':kotlindemo'

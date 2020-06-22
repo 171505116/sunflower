@@ -18,11 +18,15 @@ package com.yao.mvpdemo.ui.register;
 
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
@@ -63,6 +67,13 @@ public class RegisterActivity extends BaseActivity<RegisterContract.Presenter> i
     protected int layoutId() {
         return R.layout.activity_register;
     }
+
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     protected void initData() {
